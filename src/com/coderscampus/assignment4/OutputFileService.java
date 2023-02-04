@@ -9,14 +9,14 @@ import java.util.List;
 public class OutputFileService {
 	public void generateFile(Courses[] course1Record, File csvfile) {
 		//handling null rows 
+		Courses courseNullValue = new Courses();
 		for(int i=0; i < course1Record.length; i++) {
 		 	if(course1Record[i]==null) {
-				Courses course = new Courses();
-				course.setStudentID(0);
-				course.setStudentName("");
-				course.setStudentGrade(0);
-				course.setCourseName("");
-				course1Record[i]=course;
+		 		courseNullValue.setStudentID(0);
+		 		courseNullValue.setStudentName("");
+		 		courseNullValue.setStudentGrade(0);
+		 		courseNullValue.setCourseName("");
+				course1Record[i] = courseNullValue;
 		 	}else{
 		 		continue;
 		 	}
