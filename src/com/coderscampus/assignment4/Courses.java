@@ -52,24 +52,11 @@ public class Courses implements Serializable, Comparable<Courses>  {
 	public void setStudentGrade(Integer studentGrade) {
 		this.studentGrade = studentGrade;
 	}
-// I tried to use .equals() method but it is giving me error
-//	@Override
-//	public int compareTo(Courses that) {
-//		int result=0;
-//		if(this.getStudentGrade()>that.getStudentGrade()) {
-//			result= -1;				
-//		}else if(this.getStudentGrade()==(that.getStudentGrade())) {
-//			result = 0;
-//		}else if(this.getStudentGrade() < that.getStudentGrade()) {
-//			result =  1;
-//		}
-//		return result;
-//	}
 	@Override
 	public int compareTo(Courses that) {
 		if(this.studentGrade.compareTo(that.studentGrade)==0) {
 			return that.studentGrade.compareTo(this.studentGrade);				
-		}else 
+		}else  
 			return that.studentGrade.compareTo(this.studentGrade);	
 	}
 			
